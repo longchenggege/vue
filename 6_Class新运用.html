@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Class的基本运用</title>
+</head>
+<body>
+
+<script>
+
+//1、通过构造函数产生一个对象  
+  /*function Person(name,age){
+    this.name = name;
+    this.age = age;
+  }
+  
+  Person.prototype = {
+    constructor:Person,
+    print(){
+      console.log('我叫'+this.name+'今年'+this.age);
+    }
+  }*/
+  
+
+//2、用class面向对象
+  class Person{
+    constructor(name,age){
+      this.name = name;
+      this.age = age;
+    }
+    print(){
+      console.log('我叫'+this.name+'今年'+this.age);
+    }
+  }
+  let person = new Person('张三2',19);
+  console.log(person.print());
+</script>
+</body>
+</html>

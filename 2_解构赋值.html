@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>解构赋值</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+  // 1、基本用法
+  //let name = 'zsan', age='14', sex = '男';
+  let [name,age] = ['lisi',19];
+  //name = 'laowu';
+  console.log(name);
+  console.log(age);*/
+
+  //2、对象的解构赋值 
+  /*let obj = {name:'lisi',age:'15'};
+  console.log(obj.age);*/
+  /*let {name,age} = {name:'lisi',age:'15'};
+  console.log(name);*/
+
+  //和键值相同，值可以是数组和对象
+  /*let {name,age,friends,pet} = {name:'lisi',age:'15',friends:['guan','feng'],pet:{name:'mao',sex:'nv'}};
+  console.log(friends);
+  console.log(pet);*/
+
+  //3、数组的解构赋值
+  /*let [name,age] = ['lisi',19];
+  let [arr1,arr2,[arr3,arr4]] = [1,2,[3,4]];
+  let [a, , ,c] = [1,2,3]; //前后解构一致对应
+  console.log(c);*/
+
+  //4、基本类型的解构赋值
+  let [a,b,c,d,e] = '我是幸福人';
+  console.log(d);
+
+  
+</script>
+
+
+</body>
+</html>

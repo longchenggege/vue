@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>let和var区别</title>
+    <meta charset="UTF-8">
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+<button>按钮4</button>
+<button>按钮5</button>
+<button>按钮6</button>
+    <script>
+        //let 和 var的不同
+        //作用：声明变量和常量
+        // 1、作用域不同,let只局限于当前代码块{}
+        // 2、let 声明的变量作用域不会被提升
+        // 3、相同作用域，不能重复声明同一个变量，var 后面定义会覆盖前面定义值，let重复声明会报错阻断js执行,但可以重复赋值
+        // 4、
+        /*{
+            var str = '张三';
+            console.log(str);
+
+            let str2 = '李四';
+            console.log(str2);
+        }
+        console.log('124'+str);
+        console.log('223'+str2);*/
+
+       /* {
+            console.log(str);
+            var str = '张三';
+            /!*这样打印会提示没有设置值。即 javascript5里面 var 每次定义变量,都会提升到该段代码首部，
+            但所赋值不会提升到首部，所有这样输出 会提示 没有 设置值。*!/
+
+            console.log(str1);
+            let str1 = '张三1';
+           /!* 而 javascript6 使用let不会提升， 会报错，变量没定义。*!/
+
+        }*/
+
+        /*{
+            var str = 'vvv';
+            var str = 'haha';
+            console.log(str);
+
+            let str2 = 'vvv';
+            let str2 = 'haha2'; //可覆盖值，不能重复声明 
+            console.log(str2);
+        }*/
+
+        var but = document.querySelectorAll('button');
+        var but = document.getElementsByTagName('button');
+        for( i=0;i<but.length;i++){
+
+            but[i].onclick = function(){
+                document.write(i);
+                alert(i);
+            };
+        }
+
+        /*for(var i=0;i<but.length;i++){
+            console.log(i);
+        }*/
+
+        //1、作用域不同,let只局限于当前代码块{}
+        //2、const 声明的变量作用域不会被提升
+        //3、相同作用域，不能重复声明同一个变量,报错
+        //4、声明常量必须赋值
+    </script>
+
+    <script type="text/javascript">
+        {
+         /*const name;
+         name = 'san';
+         console.log(name);
+         const a = 'heha';
+         const a = 'hehe';
+         console.log(a);*/
+        }
+        {
+           /* const name = 'sd';
+            name = 'vv';
+            console.log(name);*/
+            /*const a = {name:'zsan'};
+            a.name = 'lisi';
+            console.log(a);*/
+        }
+    </script>
+</body>
+</head>
+</html>

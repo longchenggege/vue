@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>js使用</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="abc">abc内容</div>
+  <div id="vvv">abc内容2</div>
+  <p>yyy</p>
+    <img src="1.jpg" id='tu'>
+    <br/>
+  <tr>
+    <td style="width:96%;">open进行中项目</td><td><img alt="" src="1.jpg" style="text-align:right;cursor:hand;" onclick="javascript:window.open('test.html','_top');"/></td>
+  </tr>  
+    <br/>
+  <tr>
+    <td style="width:96%;">location进行中项目</td><td><img alt="" src="2.jpg" style="text-align:right;cursor:hand;" onclick="javascript:window.location.assign('http://www.w3school.com.cn');"/></td>
+  </tr>
+
+    <br/>
+    <br/>
+    <br/>
+    <div>
+      选择1：<input name='vv' type='checkbox' class="vv" value="1"></input>
+      选择2：<input name='vv' type='checkbox' class="vv" value="2"></input>
+      选择3：<input name='vv' type='checkbox' class="vv" value="3"></input>
+      选择4：<input name='vv' type='checkbox' class="vv" value="4"></input>
+      <br/>
+      <input type="button" id='qu' value="技术" onclick="tongji2()"></input>
+    </div>
+  <script type="text/javascript">
+    /*var c = document.getElementById('qu');
+    qu.onclick = function(){
+      alert(12);
+    };*/
+
+    function tongji(){
+      var arr = new Array();
+      var he = document.getElementsByName('vv');
+      //alert(he.length);
+      for(var i=0;i<he.length;i++){
+        if(he[i].checked==true){
+          arr.push(he[i].value);
+        }
+      }
+      var str = arr.join(',');
+      alert(str);
+    }
+
+    function tongji2(){
+      var arr = new Array();
+      var he = document.getElementsByName('vv');
+      //alert(he.length);
+      for(var i=0;i<he.length;i++){
+        if(he[i].checked==true){
+          arr[] = he[i].value;
+          //arr.push(he[i].value);
+        }
+      }
+      var str = arr.join(',');
+      var reg = /^(,+)/;
+      str = str.replace(reg,"");
+      alert(str);
+    }
+
+
+  /*var a = 'test',
+  b = 'vv';
+  document.write(a);*/
+    /*var cname = document.getElementsByClassName('abc');
+    cname.innerHTML = 'bianbian';
+    */
+    /*var  idname= document.getElementById('vvv');
+    idname.innerHTML = 'bianbian';
+     document.write("Hello \ World!");
+     b = 'wuli';
+     function xie(a){
+      var b = 'wuli2';
+      document.write(a+b);
+     }
+     document.write(b);
+      xie('sha');*/
+    /*var tu = document.getElementById('tu');
+    tu.src='2.jpg';*/
+    /*document.write(Date());
+    document.write(Math.floor(2.945)) ;*/
+
+    /*var c = 0;
+    function kaishitime(){
+      var t = document.getElementById('ntime');
+      t.innerHTML = c;
+      c++;
+      if(c>=5){
+        clearTimeout(t);
+      }
+      x = setTimeout("kaishitime()",1000);
+
+    }*/
+
+    /*var bFound = false;
+    alert(bFound);*/
+
+    /*var iBaseNum = 10;
+
+    function addNum(iNum1, iNum2) {
+      function doAdd(c) {
+        return iNum1 + iNum2+ c + iBaseNum;
+      }
+      return doAdd(8);
+    }
+
+    $aa = addNum(2,3);
+    alert($aa);*/
+
+
+  </script>
+
+  <div id='ntime'></div>
+  <input type="button" onclick="kaishitime()" value="开始"></input>
+</body>
+</html>

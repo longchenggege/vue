@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+1，特点 属性 函数
+
+map 和 对象 使用相似。
+比对象更完善的数据处理方式，键值对存储数据，键值可以是字符、数组、对象。不能存储重复数据（键值不能相同，但若设置两个{}空对象作为键值可行，因为每个对象都会开辟单独空间）。
+<script type="text/javascript">
+  
+  /*let obj1 = {a:1}, obj2 = {b:2}, obj = {};
+  obj1.name = 'heheda';
+  console.log(obj1);*/
+  //键值对，键值可以是字符、数组、对象。
+  let obj1 = {a:1}, obj2 = {b:2};
+  const map = new Map([
+    ['name','张三'],
+    ['age',15],
+    [obj1,'你好'],
+    [[1,2],'heheda']
+  ]);
+  console.log(map);
+
+  //size
+  console.log(map.size);
+
+  //set、get
+  map.set('friends',['guan','feng']).set(['狗','猫'],['小黑','小花']);
+  map.set({},'abc');
+  map.set({},'dfg');
+  //console.log(map);
+  //console.log(map.get('friends'));
+  //console.log(map.get(obj1));
+  //console.log(map.get([1,2])); //数组如何取值
+  
+  //delete
+  //map.delete('age');
+  console.log(map);
+
+  //has  clear
+  //console.log(map.has('age'));
+  //console.log(map.clear());
+
+  //keys(),values(), entries() 返回一个集合构造器
+  //console.log(map.keys());
+  
+  //遍历 
+  /*map.forEach(function(value,key){
+    console.log(key+':'+value);
+  })*/
+  
+</script>
+
+
+</body>
+</html>
